@@ -6,6 +6,7 @@
   --black: #3d3d3d;
   --darker-bg: #4b4b4b;
   --main-color: #d50ff7;
+  --darker-dark: #474646;
 }
 
 * {
@@ -159,6 +160,7 @@ section {
   }
 
   .header .flex .navbar {
+    align-items: end;
     display: none;
     position: absolute;
     top: 99%;
@@ -167,7 +169,11 @@ section {
     border: 0.1rem solid var(--black);
     border-radius: 5px;
     animation: slideIn 0.5s forwards;
-    background-color: var(--darker-bg);
+    background-color: rgba(75, 75, 75, 0.9);
+    color: var(--white);
+  }
+  .header .flex .navbar a {
+    color: var(--white);
   }
   #navbar.show {
     display: block;
@@ -222,4 +228,47 @@ section {
   html {
     font-size: 50%;
   }
+}
+
+/* Boxes style */
+
+.count .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 1.5rem;
+  text-align: center;
+  align-items: flex-start;
+}
+
+.count .box-container .box {
+  background-color: var(--darker-bg);
+  border-radius: 0.5rem;
+  padding-block: 1.4rem;
+  padding-inline: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.count .box-container .box:hover {
+  background-color: var(--darker-dark);
+}
+
+.count .box-container .box i {
+  font-size: 5rem;
+  color: var(--green);
+}
+.count .box-container .box .content {
+  display: block;
+  margin-block: 1rem;
+  text-align: center;
+}
+.count .box-container .box .content h3 {
+  font-size: 2.2rem;
+  color: var(--white);
+}
+.count .box-container .box .content p {
+  margin-top: -1.5rem;
+  font-size: 1.6rem;
+  color: var(--darker-white);
 }
