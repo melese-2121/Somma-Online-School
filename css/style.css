@@ -272,3 +272,38 @@ section {
   font-size: 1.6rem;
   color: var(--darker-white);
 }
+
+/* About section */
+.about .row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.about .row .image {
+  text-align: center;
+  flex: 1 1 40rem;
+}
+
+.about .row .image img {
+  width: 80%;
+}
+
+.about .row .content {
+  text-align: center;
+  flex: 1 1 40rem;
+}
+
+.about .row .content h3 {
+  font-weight: bold;
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.about .row .content p {
+  padding: 1rem 0;
+  line-height: 2;
+  font-size: 1.6rem;
+  color: var(--darker-white);
+}
