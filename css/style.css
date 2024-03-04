@@ -307,3 +307,63 @@ section {
   font-size: 1.6rem;
   color: var(--darker-white);
 }
+.courses-cont {
+  max-width: 100%;
+  max-height: 400px;
+}
+
+/* courses section */
+.swiper-cont {
+  padding: 2rem;
+}
+.swiper {
+  max-width: 100%;
+  margin-block: 5rem;
+  max-height: 100rem;
+}
+
+.swiper-slide {
+  position: relative;
+  background-color: var(--darker-dark);
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+  align-items: center;
+  border-radius: 0.5rem;
+  z-index: 0;
+}
+.swiper-slide img {
+  max-width: 15rem;
+  max-height: 10rem;
+}
+.swiper-slide h3 {
+  color: var(--white);
+}
+.swiper-slide p {
+  color: var(--darker-white);
+  font-size: small;
+  padding-inline: 2rem;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 1;
+  position: relative;
+  border-radius: 100%;
+  font-size: small;
+  font-weight: blold;
+}
+
+@media (max-width: 720px) {
+  .swiper-button-next {
+    right: 20px;
+    transform: rotate(90deg);
+  }
+
+  .swiper-button-prev {
+    left: 20px;
+    transform: rotate(90deg);
+  }
+}

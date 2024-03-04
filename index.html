@@ -16,6 +16,11 @@
 
     <!-- custom styles -->
     <link rel="stylesheet" href="css/style.css" />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- header section -->
@@ -104,7 +109,89 @@
         </div>
       </div>
     </section>
+    <section class="swiper-cont">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="assets/Website designer-bro (2).svg" alt="image" />
+            <h3 class="course-title">Web Development Bootcamp</h3>
+            <p class="course-description">
+              Learn HTML, CSS, JavaScript, and more to become a proficient web
+              developer.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Website Creator-amico.svg" alt="image" />
+            <h3 class="course-title">Graphic Design Essentials</h3>
+            <p class="course-description">
+              Unlock your creativity and learn the principles of graphic design.
+              Master
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Mobile-rafiki.svg" alt="image" />
+            <h3 class="course-title">Mobile App Development</h3>
+            <p class="course-description">
+              Build cross-platform mobile apps using React Native. Learn to
+              develop apps for iOS
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/Marketing-amico.svg" alt="image" />
+            <h3 class="course-title">Digital Marketing Strategies</h3>
+            <p class="course-description">
+              Explore the latest trends and techniques in digital marketing.
+              Learn to create effective marketing campaigns,
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/home-2.svg" alt="image" />
+            <h3 class="course-title">Web Development Bootcamp</h3>
+            <p class="course-description">
+              Learn HTML, CSS, JavaScript, and more to become a proficient web
+              developer.
+            </p>
+          </div>
+          <div class="swiper-slide">
+            <img src="assets/home-2.svg" alt="image" />
+            <h3 class="course-title">Web Development Bootcamp</h3>
+            <p class="course-description">
+              Learn HTML, CSS, JavaScript, and more to become a proficient web
+              developer.
+            </p>
+          </div>
+        </div>
 
+        <i class="swiper-button-next"></i>
+        <i class="swiper-button-prev"></i>
+      </div>
+    </section>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        direction: getDirection(),
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          resize: function () {
+            swiper.changeDirection(getDirection());
+          },
+        },
+      });
+
+      function getDirection() {
+        var windowWidth = window.innerWidth;
+        var direction = window.innerWidth <= 780 ? "vertical" : "horizontal";
+
+        return direction;
+      }
+    </script>
     <!-- link to javascript -->
     <script src="js/script.js"></script>
   </body>
