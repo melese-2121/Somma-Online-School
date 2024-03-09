@@ -38,3 +38,75 @@ function getDirection() {
 
   return direction;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const images = [
+    "image1.jpg",
+    "image2.jpg",
+    "image3.jpg",
+    "image4.jpg",
+    "image5.jpg",
+    "image6.jpg",
+    "image7.jpg",
+    "image8.jpg",
+    "image9.jpg",
+    "image10.jpg",
+  ];
+  const info = [
+    "Information about Instructor 1",
+    "Information about Instructor 2",
+    "Information about Instructor 3",
+    "Information about Instructor 4",
+    "Information about Instructor 5",
+    "Information about Instructor 6",
+    "Information about Instructor 7",
+    "Information about Instructor 8",
+    "Information about Instructor 9",
+    "Information about Instructor 10",
+  ];
+  const instructorsContent = document.querySelector(".instructors-content");
+  const imgElement = instructorsContent.querySelector("img");
+  const infoElement = instructorsContent.querySelector("p");
+
+  let currentIndex = 0;
+
+  function changeContent() {
+    imgElement.src = images[currentIndex];
+    infoElement.textContent = info[currentIndex];
+    currentIndex = (currentIndex + 1) % images.length;
+  }
+
+  changeContent(); // Initial call to display the first image and information
+
+  setInterval(changeContent, 1000); // Change content every second
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const instructors = document.querySelectorAll(".instructor");
+  let currentIndex = 0;
+
+  function showNextInstructor() {
+    instructors.forEach((instructor) => {
+      instructor.style.display = "none";
+    });
+    instructors[currentIndex].style.display = "block";
+    currentIndex = (currentIndex + 1) % instructors.length;
+  }
+
+  function startAnimation() {
+    showNextInstructor(); // Show the first instructor immediately
+    setInterval(showNextInstructor, 6000);
+  }
+
+  startAnimation();
+});
+
+function showSocialIcons() {
+  const socialIcons = document.querySelector(".social-icons");
+  socialIcons.style.display = "block";
+}
+
+function hideSocialIcons() {
+  const socialIcons = document.querySelector(".social-icons");
+  socialIcons.style.display = "none";
+}
